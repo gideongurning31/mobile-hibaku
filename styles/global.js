@@ -1,8 +1,15 @@
 import { StyleSheet } from 'react-native';
 
+export const palette = {
+  dark1: '#52734D',
+  dark2: '#91C788',
+  light1: '#FEFFDE',
+  light2: '',
+};
+
 export const globalStyles = StyleSheet.create({
   header: {
-    backgroundColor: '#52734D',
+    backgroundColor: palette.dark1,
   },
   headerText: {
     color: '#FFF',
@@ -10,12 +17,13 @@ export const globalStyles = StyleSheet.create({
   },
   tabBarStyle: {
     height: 60,
-    backgroundColor: '#52734D',
+    backgroundColor: palette.dark1,
   },
   container: {
-    padding: 20,
-    marginTop: 20,
+    flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#EEE',
   },
   titleText: {
     fontSize: 24,

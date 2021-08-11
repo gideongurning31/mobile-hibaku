@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
+import { globalStyles } from '../styles/global';
 
 function SettingsScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>PENGATURAN</Text>
+    <View style={globalStyles.container}>
+      <Text style={globalStyles.defaultText}>PENGATURAN</Text>
     </View>
   );
 }
