@@ -1,30 +1,23 @@
-import React from 'react';
-import { StyleSheet, View, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import HeaderComponent from './components/HeaderComponent';
+import * as React from 'react';
+import { useFonts } from 'expo-font';
+import { NavigationContainer } from '@react-navigation/native';
+import NavMenu from './routes/NavMenu';
 
-const App = () => {
+export default function App() {
+  const [loaded] = useFonts({
+    nunito: require('./assets/fonts/Nunito-Regular.ttf'),
+    'nunito-italic': require('./assets/fonts/Nunito-Italic.ttf'),
+    'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
+    'nunito-bold-italic': require('./assets/fonts/Nunito-BoldItalic.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
-    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-      <View style={styles.container}>
-        <HeaderComponent/>
-      </View>
-    </TouchableWithoutFeedback>
+    <NavigationContainer>
+      <NavMenu></NavMenu>
+    </NavigationContainer>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FEFFDE',
-  },
-  content: {
-    padding: 40,
-    flex: 1,
-  },
-  list: {
-    marginTop: 20,
-    flex: 1,
-  },
-});
-
-export default App;
+}
