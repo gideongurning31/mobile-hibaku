@@ -21,7 +21,7 @@ function Navigator() {
     >
       <Tab.Screen name="Home" component={HomeScreen} options={tabOptions('Beranda')} />
       <Tab.Screen name="Commodity" component={CommodityScreen} options={tabOptions('Komoditas')} />
-      <Tab.Screen name="Transaction" component={TransactionScreen} options={tabOptions('Transaction', 4)} />
+      <Tab.Screen name="Transaction" component={TransactionScreen} options={tabOptions('Transaksi', 4)} />
       <Tab.Screen name="Settings" component={SettingsScreen} options={tabOptions('Pengaturan')} />
     </Tab.Navigator>
   );

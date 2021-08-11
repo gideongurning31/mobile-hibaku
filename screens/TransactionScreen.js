@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Modal } from 'react-native';
 import Fontisto from '@expo/vector-icons/Fontisto';
+import { StyleSheet, View, Text, Modal } from 'react-native';
 import { globalStyles, palette } from '../styles/global';
 
 function TransactionScreen() {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <View style={globalStyles.container}>

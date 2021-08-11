@@ -8,7 +8,7 @@ export const routeIcon = {
 };
 
 export const tabOptions = (menuTitle, badge) => {
-  let options = { ...navBarStyles, title: 'HIBAKU '.concat(menuTitle) };
+  let options = { ...navBarStyles, title: 'HIBAKU - '.concat(menuTitle) };
   if (badge && parseInt(badge) > 0) {
     options['tabBarBadge'] = parseInt(badge);
   }
