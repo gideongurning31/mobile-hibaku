@@ -1,9 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
 import { useFonts } from 'expo-font';
-import { globalStyles } from './styles/global';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeComponent from './screens/HomeComponent';
-import StackNav from './routes/HomeStack';
+import AboutComponent from './screens/AboutComponent';
+import HeaderComponent from './screens/HeaderComponent';
+import ReviewDetailComponent from './screens/ReviewDetailComponent';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [loaded] = useFonts({
@@ -18,8 +22,13 @@ export default function App() {
   }
 
   return (
-    <View style={globalStyles.container}>
-      <StackNav/>
-    </View>
+    <NavigationContainer>
+      <HeaderComponent></HeaderComponent>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeComponent} />
+        <Stack.Screen name="About" component={AboutComponent} />
+        <Stack.Screen name="Details" component={ReviewDetailComponent} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
