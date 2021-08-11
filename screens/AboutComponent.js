@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-const AboutComponent = () => {
+export default AboutComponent = () => {
   return (
     <View style={styles.container}>
       <Text>ABOUT COMPONENT</Text>
@@ -14,5 +14,3 @@ const styles = StyleSheet.create({
     padding: 25,
   },
 });
-
-export default AboutComponent;

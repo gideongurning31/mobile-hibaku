@@ -1,11 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 import { useFonts } from 'expo-font';
-
 import { globalStyles } from './styles/global';
 import HomeComponent from './screens/HomeComponent';
-import AboutComponent from './screens/AboutComponent';
-import ReviewDetailComponent from './screens/ReviewDetailComponent';
+import StackNav from './routes/HomeStack';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -21,7 +19,7 @@ export default function App() {
 
   return (
     <View style={globalStyles.container}>
-      <HomeComponent />
+      <StackNav/>
     </View>
   );
 }
