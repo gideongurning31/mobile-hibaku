@@ -1,13 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeComponent from './screens/HomeComponent';
-import AboutComponent from './screens/AboutComponent';
-import HeaderComponent from './screens/HeaderComponent';
-import ReviewDetailComponent from './screens/ReviewDetailComponent';
-
-const Stack = createNativeStackNavigator();
+import NavMenu from './routes/NavMenu';
 
 export default function App() {
   const [loaded] = useFonts({
@@ -23,12 +17,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <HeaderComponent></HeaderComponent>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeComponent} />
-        <Stack.Screen name="About" component={AboutComponent} />
-        <Stack.Screen name="Details" component={ReviewDetailComponent} />
-      </Stack.Navigator>
+      <NavMenu></NavMenu>
     </NavigationContainer>
   );
 }

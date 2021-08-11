@@ -1,11 +1,21 @@
 import { StyleSheet } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
+  header: {
+    backgroundColor: '#52734D',
+  },
+  headerText: {
+    color: '#FFF',
+    fontFamily: 'nunito-bold',
+  },
+  tabBarStyle: {
+    height: 60,
+    backgroundColor: '#52734D',
+  },
   container: {
-    flex: 1,
+    padding: 20,
     marginTop: 20,
     alignItems: 'center',
-    padding: 20,
   },
   titleText: {
     fontSize: 24,
@@ -16,3 +26,10 @@ export const globalStyles = StyleSheet.create({
     fontFamily: 'nunito',
   },
 });
+
+export const navBarStyles = {
+  headerStyle: globalStyles.header,
+  headerTitleStyle: globalStyles.headerText,
+  tabBarStyle: globalStyles.tabBarStyle,
+  tabBarShowLabel: false,
+};
