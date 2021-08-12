@@ -16,13 +16,12 @@ function Navigator() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => <Fontisto name={routeIcon[route.name]} size={size} color={color} />,
         tabBarActiveTintColor: palette.dark2,
-        tabBarInactiveTintColor: palette.light1,
-      })}
-    >
-      <Tab.Screen name="Home" component={HomeScreen} options={tabOptions('Beranda')} />
-      <Tab.Screen name="Commodity" component={CommodityScreen} options={tabOptions('Komoditas')} />
-      <Tab.Screen name="Transaction" component={TransactionScreen} options={tabOptions('Transaksi', 4)} />
-      <Tab.Screen name="Settings" component={SettingsScreen} options={tabOptions('Pengaturan')} />
+        tabBarInactiveTintColor: palette.light1
+      })}>
+      <Tab.Screen name='Home' component={HomeScreen} options={tabOptions('Beranda')} />
+      <Tab.Screen name='Commodity' component={CommodityScreen} options={tabOptions('Komoditas')} />
+      <Tab.Screen name='Transaction' component={TransactionScreen} options={tabOptions('Transaksi', 4)} />
+      <Tab.Screen name='Settings' component={SettingsScreen} options={tabOptions('Pengaturan')} />
     </Tab.Navigator>
   );
 }

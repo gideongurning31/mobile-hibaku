@@ -4,7 +4,7 @@ export const routeIcon = {
   Home: 'home',
   Commodity: 'shopping-store',
   Transaction: 'shopping-basket',
-  Settings: 'spinner-cog',
+  Settings: 'spinner-cog'
 };
 
 export const tabOptions = (menuTitle, badge) => {

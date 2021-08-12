@@ -8,7 +8,7 @@ export default function App() {
     nunito: require('./assets/fonts/Nunito-Regular.ttf'),
     'nunito-italic': require('./assets/fonts/Nunito-Italic.ttf'),
     'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
-    'nunito-bold-italic': require('./assets/fonts/Nunito-BoldItalic.ttf'),
+    'nunito-bold-italic': require('./assets/fonts/Nunito-BoldItalic.ttf')
   });
 
   if (!loaded) {

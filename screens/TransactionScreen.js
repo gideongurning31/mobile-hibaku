@@ -8,13 +8,13 @@ function TransactionScreen() {
 
   return (
     <View style={globalStyles.container}>
-      <Modal visible={modalOpen} style={styles.modal} animationType="slide">
+      <Modal visible={modalOpen} style={styles.modal} animationType='slide'>
         <View style={styles.modal}>
           <Text style={globalStyles.defaultText}>COMING SOON!</Text>
-          <Fontisto name="close-a" size={24} style={styles.iconButton} onPress={() => setModalOpen(false)} />
+          <Fontisto name='close-a' size={24} style={styles.iconButton} onPress={() => setModalOpen(false)} />
         </View>
       </Modal>
-      <Fontisto name="shopping-basket-add" size={24} style={styles.iconButton} onPress={() => setModalOpen(true)} />
+      <Fontisto name='shopping-basket-add' size={24} style={styles.iconButton} onPress={() => setModalOpen(true)} />
       <Text style={globalStyles.defaultText}>TRANSAKSI BERLANGSUNG</Text>
     </View>
   );
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     margin: 30,
     alignSelf: 'center',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   iconButton: {
     margin: 20,
@@ -39,6 +39,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     alignSelf: 'center',
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 });
