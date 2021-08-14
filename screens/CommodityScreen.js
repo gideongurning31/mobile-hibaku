@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
   },
   buttonContent: {
     ...globalStyles.defaultText,
-    color: '#FFF'
+    color: palette.canvas
   }
 });
